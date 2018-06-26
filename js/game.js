@@ -183,7 +183,7 @@ class Game {
             this.framecounter++;
         }
     }
-};
+}
 
 if (typeof (module) !== 'undefined') {
     module.exports = Game;

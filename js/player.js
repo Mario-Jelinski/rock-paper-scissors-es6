@@ -1,6 +1,5 @@
 "use strict";
 
-/*module.exports = */
 class Player {
     constructor() {
         this._name = '';

@@ -1,18 +1,17 @@
 /*global module */
-var Solver = function () {
 
-    this.choices = ["rock", "spock", "paper", "lizard", "scissors"];
-    this.map = {};
-        
-};
+class Solver {
+    constructor() {
+        this.choices = ["rock", "spock", "paper", "lizard", "scissors"];
+        this.map = {};
+    }
 
-Solver.prototype = {
-    init: function () {
-        var self = this;        
+    init() {
+        let self = this;        
         this.choices.forEach(function(choice, i) {
             self.map[choice] = {};
-            for (var j = 0, half = (self.choices.length-1)/2; j < self.choices.length; j++) {
-                var opposition = (i+j)%self.choices.length
+            for (let j = 0, half = (self.choices.length-1)/2; j < self.choices.length; j++) {
+                let opposition = (i+j)%self.choices.length
                 if (!j)
                     self.map[choice][choice] = "0"  // tie
                 else if (j <= half)
@@ -21,11 +20,12 @@ Solver.prototype = {
                     self.map[choice][self.choices[opposition]] = 1; //player 1
             }
         });        
-    },
-    compare: function(choice1, choice2) {
+    }
+    compare(choice1, choice2) {
         return (this.map[choice1] || {})[choice2] || -1;
     }
-};
+}
+
 
 if (typeof (module) !== 'undefined') {
     module.exports = Solver;
