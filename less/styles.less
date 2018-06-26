@@ -1,0 +1,140 @@
+body {
+    background-color: #f6f6f6;
+    color: #333;
+    font-family: "Market Sans", Arial, sans-serif;
+}
+.col-md-12 {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+}
+
+.row {
+   &:after {
+        content: '';
+        display: block;
+        clear: both;
+   }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+   }
+}
+
+.game {
+    .btn {
+        font-weight: 700;
+        margin: 7px;
+
+        border-radius: 3px;
+        border: 1px solid transparent;
+    }
+
+    .btn-primary {
+        background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        width: 200px;
+        color: #fff;
+        &:hover {
+            background: #00509d;
+        }
+    }
+
+    .btn-secondary {
+        border: 1px solid #ddd;
+        background: #f8f8f8;
+        background: -webkit-gradient(linear,left top,left bottom,from(#fefefe),to(#f8f8f8));
+        padding: 10px;
+        font-size: 16px;
+        width: 200px;
+        color: #0654ba;
+        &:hover {
+            background: #f1f1f1;
+        }
+    }
+
+    #choices-box {
+        border: 1px solid #ccc;
+        background-color: white;
+        padding: 10px 0;
+        img {
+            padding: 10px;
+        }
+    }
+
+    .extended-mode {
+        display: none;
+    }
+    .result-box {
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc;
+        background-color: white;
+        padding: 10px 0;
+        min-height: 175px;
+
+        #result-box1, #result-box2 {
+            max-width: 155px;
+            padding: 10px;
+            float: left;
+        }
+    }
+    
+    .game-mode-box {
+        line-height: 50px;
+    }
+
+    #game-result, #game-score {
+        font-size: 20px;
+        min-height: 30px;
+        font-weight: bold;
+    }
+
+    #game-start {
+        img {
+            max-width: 100px;
+        }
+    }
+    label > input {
+        visibility: hidden; 
+        position: absolute; 
+    }
+    
+    label > input + img {
+        cursor:pointer;
+        border:2px solid transparent;
+    }
+    label > input:checked + span {
+        border: 1px solid #aaa;
+        background: #f0f0f0;
+    } 
+    label > input:checked + img {
+        border: 1px solid #aaa;
+        border-radius: 10px;
+    }
+
+
+    @media (max-width: 450px) {
+        .game-mode-box {
+            span {
+                width: 80%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;
+                line-height: 40px;
+            }
+        }
+    }
+}

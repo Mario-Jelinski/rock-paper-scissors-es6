@@ -1,0 +1,101 @@
+html
+  head
+    title
+      | Rock Paper Scissors
+    style
+      include ../css/styles.css
+  body    
+    div(class='game')
+      div(class='row')
+        div(class='col-md-12 text-center')
+          h1 rock paper scissors
+      div(class='row')
+        div(class='col-md-12 text-center')
+          div(class='result-box clearfix')
+            div(id='result-box1')
+            div(id='result-box2')
+      div(class='row')
+        div(class='col-md-12 text-center')
+          div(class='game-mode-box')
+            label
+              input(
+                type='radio'
+                name='game-mode'
+                value='p-vs-c'
+                checked
+              )
+              span(class='btn btn-secondary')
+                | Player vs Computer
+            label
+              input(
+                type='radio'
+                name='game-mode'
+                value='c-vs-c'
+              )
+              span(class='btn btn-secondary')
+                | Computer vs Computer
+      div(class='row')
+        div(class='col-md-12 text-center', id='game-result')
+      div(class='row')
+        div(class='col-md-12 text-center', id='game-score')
+      div(class='row')
+        div(class='col-md-12')
+          div(class='text-center' id='choices-box')
+            label
+              input(
+                type="radio"
+                name="choice"
+                value="rock"
+                checked
+              )
+              img(src="img/rock_icon.jpg")
+            label
+              input(
+                type="radio"
+                name="choice"
+                value="paper"
+              )
+              img(src="img/paper_icon.jpg")  
+            label
+              input(
+                type="radio"
+                name="choice"
+                value="scissors"
+              )
+              img(src="img/scissors_icon.jpg")
+            label(class='extended-mode')
+              input(
+                type="radio"
+                name="choice"
+                value="lizard"
+              )
+              img(src="img/lizard_icon.jpg")
+            label(class='extended-mode')
+              input(
+                type="radio"
+                name="choice"
+                value="spock"
+              )
+              img(src="img/spock_icon.jpg")
+          br
+          br
+      div(class='row')
+        div(class='col-md-12 text-center')
+          button(id='game-start', class='btn btn-primary')
+            | play
+      div(class='row')
+        div(class='col-md-12 text-center')
+          button(id='switch-mode' class='btn btn-secondary')
+            | switch mode
+          
+  script(src='/js/solver.js')
+  script(src='/js/player.js')
+  script(src='/js/computer.js')
+  script(src='/js/game.js')
+  script.
+    game = new Game;
+    game.init();
+
+    
+
+

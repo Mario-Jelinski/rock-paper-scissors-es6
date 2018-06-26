@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/player.js"],"names":["Player","this","score","name","prototype","setScore","getScore","setName","getName"],"mappings":"AAAA,IAAIA,OAAS,WAETC,KAAKC,MAAQ,EACbD,KAAKE,KAAO,UAGhBH,OAAOI,UAAY,CACfC,SAAU,SAAUH,GAChBD,KAAKC,MAAQA,GAEjBI,SAAU,WACN,OAAOL,KAAKC,OAEhBK,QAAS,SAAUJ,GACfF,KAAKE,KAAOA,GAEhBK,QAAS,WACL,OAAOP,KAAKE","sourceRoot":"/"}
