@@ -1,4 +1,5 @@
 /*global Player, module */
+/* exported Player */
 
 let Player = require('./player.js');
 
