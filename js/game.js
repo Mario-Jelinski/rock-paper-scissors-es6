@@ -1,6 +1,11 @@
 /*global Player, Computer, Solver, module */
-class Game {
-    
+/* exported Player, Computer, Solver */
+
+let Player = require('./player.js');
+let Computer = require('./computer.js');
+let Solver = require('./solver.js');
+
+class Game {    
     constructor() {
         this.config = {
             game_start:    "game-start",
@@ -101,9 +106,9 @@ class Game {
             document.getElementById(this.config.game_score).innerHTML = '';
             document.getElementById(this.config.game_result).innerHTML = '';
             document.getElementById(this.config.choices_box).style.display = display;
-            this.player.setScore(0);
-            this.computer1.setScore(0);
-            this.computer2.setScore(0);
+            this.player.score = 0;
+            this.computer1.score = 0;
+            this.computer2.score = 0;
         }
     
     setRandomPics () {
@@ -185,6 +190,5 @@ class Game {
     }
 }
 
-if (typeof (module) !== 'undefined') {
-    module.exports = Game;
-}
+let game = new Game();
+game.init();

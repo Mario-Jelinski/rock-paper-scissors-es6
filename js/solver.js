@@ -1,6 +1,6 @@
 /*global module */
 
-class Solver {
+module.exports = class Solver {
     constructor() {
         this.choices = ["rock", "spock", "paper", "lizard", "scissors"];
         this.map = {};
@@ -25,9 +25,3 @@ class Solver {
         return (this.map[choice1] || {})[choice2] || -1;
     }
 }
-
-
-if (typeof (module) !== 'undefined') {
-    module.exports = Solver;
-}
-

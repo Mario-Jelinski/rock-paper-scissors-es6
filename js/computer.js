@@ -1,6 +1,8 @@
-/*global Player */
-/*module.exports = */
-class Computer extends Player {
+/*global Player, module */
+
+let Player = require('./player.js');
+
+module.exports = class Computer extends Player {
     constructor() {
         super();
         this._names = ['Amiga', 'Atari', 'Z80'];

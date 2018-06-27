@@ -1,6 +1,6 @@
-"use strict";
+/*global module */
 
-class Player {
+module.exports = class Player {
     constructor() {
         this._name = '';
         this._score = 0;
